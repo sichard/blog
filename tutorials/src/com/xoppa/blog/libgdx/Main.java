@@ -16,6 +16,9 @@
 
 package com.xoppa.blog.libgdx;
 
+import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas;
+
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.HeadlessException;
@@ -37,9 +40,6 @@ import javax.swing.UIManager;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeSelectionModel;
 import javax.swing.tree.TreeSelectionModel;
-
-import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas;
 
 public class Main extends JFrame {
 	private static final long serialVersionUID = -4296204662394260962L;
