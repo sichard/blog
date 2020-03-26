@@ -16,8 +16,6 @@
 
 package com.xoppa.blog.libgdx.g3d.loadscene.step1;
 
-import static com.xoppa.blog.libgdx.Main.data;
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
@@ -31,12 +29,15 @@ import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.g3d.utils.CameraInputController;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
+import com.xoppa.blog.libgdx.g3d.Grid;
+
+import static com.xoppa.blog.libgdx.Main.data;
 
 /**
  * See: http://blog.xoppa.com/loading-a-scene-with-libgdx/
  * @author Xoppa
  */
-public class LoadSceneTest implements ApplicationListener {
+public class LoadSceneTest extends Grid {
     public PerspectiveCamera cam;
     public CameraInputController camController;
     public ModelBatch modelBatch;
@@ -52,6 +53,7 @@ public class LoadSceneTest implements ApplicationListener {
      
     @Override
     public void create () {
+        super.create();
         modelBatch = new ModelBatch();
         environment = new Environment();
         environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1f));
@@ -116,6 +118,8 @@ public class LoadSceneTest implements ApplicationListener {
         modelBatch.render(instances, environment);
         if (space != null)
             modelBatch.render(space);
+//        modelBatch.render(mGridInstance);
+        modelBatch.render(mCoordinatesInstance);
         modelBatch.end();
     }
      
@@ -124,6 +128,7 @@ public class LoadSceneTest implements ApplicationListener {
         modelBatch.dispose();
         instances.clear();
         assets.dispose();
+        super.dispose();
     }
 
 	@Override

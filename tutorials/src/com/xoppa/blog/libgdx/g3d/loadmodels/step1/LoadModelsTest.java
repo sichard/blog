@@ -16,7 +16,6 @@
 
 package com.xoppa.blog.libgdx.g3d.loadmodels.step1;
 
-import static com.xoppa.blog.libgdx.Main.data;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.loaders.ModelLoader;
@@ -30,6 +29,8 @@ import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.g3d.loader.ObjLoader;
 import com.badlogic.gdx.graphics.g3d.utils.CameraInputController;
+
+import static com.xoppa.blog.libgdx.Main.data;
 
 /**
  * See: http://blog.xoppa.com/loading-models-using-libgdx/
